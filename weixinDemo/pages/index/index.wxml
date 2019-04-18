@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<swiper class="swiper" indicator-dots='true' autoplay='true' interval='2000' duration='500' circular='true'>
+  <swiper-item>
+    <view style="flex-direction:column;">
+      <image class="userinfo" src="/pages/image/view.png" style="width:700rpx;height:300rpx" bindtap="jumpToMenu1"></image>
+      <text class="userinfo">评测</text>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view style="flex-direction:column;">
+      <image class="swiper-item" src="/pages/image/view.png" style="width:700rpx;height:300rpx" 
+      bindtap = "jumpToMenu2"></image>
+      <text class="userinfo">攻略</text>
+    </view>
+  </swiper-item>
+</swiper>
+
+<text class="userinfo">更新</text>
+
+<view class="container">
+  <template name="itmes">
+    <navigator url="../detail/detail?test=123&num={{num}}" hover-class="navigator-hover" bindtap = "jumpToIntro">
+      <view class="imgs">
+        <image style="width: 200rpx; height: 200rpx;margin-left=10rpx;margin-top:10rpx;" src="{{imgURL}}" class="in-img" background-size="cover" model="scaleToFill"></image>
+      </view>
+      <view class="infos">
+        <view class="title">{{title}}</view>
+        <view class="date">{{time}}</view>
+        <view class="classification">{{classification}}</view>
+      </view>
+    </navigator>
+  </template>
+
+
+
+  <block wx:for="{{newList}}" wx:key="*this">
+    <template is="itmes" data="{{...item}}" />
+  </block>
+
+  <!--<button class="animation-button" bindtap="jump">菜单</button>-->
+
+</view>

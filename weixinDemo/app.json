@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/message/message"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+      "backgroundColor":"#000000",
+      "list":[
+         {"iconPath":"pages/image/icon_component.png",
+          "selectedIconPath":"pages/image/icon_component_HL.png",
+          "pagePath":"pages/index/index",
+          "text":"首页"
+         },{
+          "iconPath": "pages/image/icon_component.png",
+          "selectedIconPath": "pages/image/icon_component_HL.png",
+          "pagePath":"pages/logs/logs",
+          "text": "设置"
+
+         }
+
+      ]
+
+  }
+}

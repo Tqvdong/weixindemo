@@ -1,0 +1,104 @@
+<view class='tablist'>
+  <view wx:for="{{tabList}}" class='item {{current==index?"select":""}}' data-pos='{{index}}' bindtap='tabItemClick'>
+    <text>{{item}}</text>
+  </view>
+</view>
+
+<swiper class="out" current='{{current}}' indicator-dots="{{false}}" autoplay="{{false}}" bindchange="contentChange">
+  <swiper-item>
+    <view class="img-left" style="background-image: url('../image/1.jpg');">
+      <text>卡罗拉是丰田COROLLA的第十代直线升级产品。自2017年11月发布以来，卡罗拉受到全球消费者关注；如今，这款全球畅销车落户一汽丰田，再次让中国消费者同步感受丰田汽车最新技术和驾乘体验。卡罗拉的前身就是AE86!卡罗拉车身尺寸较上一代花冠大幅增加， 卡罗拉为其所属系列下的最新车系。已经在国内正式发布，并且在北京车展和上海车展上成为焦点的第十代Corolla卡罗拉，已于2006年11月16日正式上市。一汽丰田即将推出的卡罗拉共有1.6L和1.8L两个排量的车型，卡罗拉无论从外形、配置，还是动力方面，都已经在旧款花冠的基础上进行了很大的提升。</text>
+    <text class= "underline" bindtap="getText" selectable = "true">自2017年11月发布以来</text>
+    <text>测试点击文本整车表现出前所未有的“宽而低”的态势，又营造出宽敞的车内空间；全新开发的双VVT－i技术的1.6升和1.8升发动机将来带更强悍的动力体验。</text>
+    <text class= "underline" bindtap="getText" selectable = "true">自2017年11月发布以来</text>
+    <text>测试点击文本整车表现出前所未有的“宽而低”的态势，又营造出宽敞的车内空间；全新开发的双VVT－i技术的1.6升和1.8升发动机将来带更强悍的动力体验。</text>
+
+    </view>
+    
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y="true" style="height: 600px">
+      <view class="nowrap">
+        <text class="color-label-left">中文名</text>
+        <text class="color-label-right">{{itemAll[num].chName}}</text>
+        <text class="color-label-left">英文名</text>
+        <text class="color-label-right">{{itemAll[num].enName}}</text>
+        <text class="color-label-yellow">身高</text>
+        <text class="color-label-white">{{itemAll[num].height}}</text>
+        <text class="color-label-yellow">体重</text>
+        <text class="color-label-white">{{itemAll[num].weight}}</text>
+        <text class="color-label-yellow">阵容</text>
+        <text class="color-label-white">{{itemAll[num].team}}</text>
+        <text class="color-label-yellow">掉星率</text>
+        <text class="color-label-white">{{itemAll[num].drop}}</text>
+        <text class="color-label-blank"> \n </text>
+        <view class="border-left">
+          <image src="/pages/image/content.png" class="color-image-left"></image>
+        </view>
+        <text class="color-label-right2">回避</text>
+        <text class="color-label-white2">等级</text>
+        <text class="color-label-white2">10%</text>
+        <text class="color-label-white2">20%</text>
+        <text class="color-label-white2">30%</text>
+        <text class="color-label-white2">40%</text>
+        <text class="color-label-white2">50%</text>
+        <view class="border-left">
+          <image src="/pages/image/content.png" class="color-image-left"></image>
+        </view>
+        <text class="color-label-right2">回避</text>
+        <text class="color-label-white2">等级</text>
+        <text class="color-label-white2">10%</text>
+        <text class="color-label-white2">20%</text>
+        <text class="color-label-white2">30%</text>
+        <text class="color-label-white2">40%</text>
+        <text class="color-label-white2">50%</text>
+        <view class="border-left">
+          <image src="/pages/image/2.png" class="color-image-left"></image>
+        </view>
+        <text class="color-label-right2">回避</text>
+        <text class="color-label-white2">等级</text>
+        <text class="color-label-white2">10%</text>
+        <text class="color-label-white2">20%</text>
+        <text class="color-label-white2">30%</text>
+        <text class="color-label-white2">40%</text>
+        <text class="color-label-white2">50%</text>
+        <text class="color-label-title">指令</text>
+      </view>
+      <view class="allCenter">
+        <image wx:for="{{background}}" src="{{item}}" class="page-body-image120"></image>
+        <canvas canvas-id="radarCanvas" class="color-canvas-left"></canvas>
+      </view>
+      <view class="nowrap">
+
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <swiper class="swiper" indicator-dots='true' autoplay='true' interval='2000' duration='900' circular='true'>
+      <swiper-item>
+        <view style="flex-direction:column;">
+          <image class="swiper-item" src="/pages/image/view.png" style="style:{{style}}" bindtap="changeBig"></image>
+          <text class="color-label-center">一破</text>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view style="flex-direction:column;">
+          <image class="swiper-item" src="/pages/image/view.png" style="style:{{style}}" bindtap="changeBig"></image>
+          <text class="color-label-center">二破</text>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view style="flex-direction:column;">
+          <image class="swiper-item" src="/pages/image/view.png" style="style:{{style}}" bindtap="changeBig"></image>
+          <text class="color-label-center">三破</text>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view style="flex-direction:column;">
+          <image class="swiper-item" src="http://thyrsi.com/t6/662/1548313651x2728278638.jpg" style="style:{{style}}" bindtap="changeBig"></image>
+          <text class="color-label-center">四破</text>
+        </view>
+      </swiper-item>
+    </swiper>
+  </swiper-item>
+</swiper>

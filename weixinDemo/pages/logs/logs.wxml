@@ -1,0 +1,18 @@
+<!--logs.wxml-->
+<view class="container log-list">
+<image wx:for="{{background}}"  src="{{item}}" class = "page-body-image" bindtap="jumpToIntro"></image>
+<canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas"></canvas>
+<canvas canvas-id="radarCanvas" disable-scroll="true" class="canvas"></canvas>
+<progress percent="20" show-info />
+<picker
+    mode="date"
+    value="{{date}}"
+    start="2015-09-01"
+    end="2017-09-01"
+    bindchange="bindDateChange"
+  >
+    <view class="picker">当前选择: {{date}}</view>
+  </picker>
+<image src="/pages/image/view.png" bindtap="saveDate" class="page-body-image"></image>
+<image src="/pages/image/view.png" bindtap="loadDate" class="page-body-image"></image>
+</view>
